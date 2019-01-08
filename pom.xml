@@ -447,10 +447,10 @@
    </profiles>
    
    <distributionManagement>
-        <repository>
+        <snapshotRepository>
 			<id>maven-snapshots</id>
 			<url>http://localhost:8081/#admin/repository/repositories:maven-snapshots</url>
-        </repository>
+        </snapshotRepository>
     </distributionManagement>
 
     <url>demopetclinic</url>
