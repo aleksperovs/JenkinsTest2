@@ -31,7 +31,7 @@ node {
     }
     
     stage('SonarQube analysis'){
-        if (env.BRANCH_NAME = 'master'){
+        if (env.BRANCH_NAME == 'master'){
             def scannerHome = tool 'SonarQube_Scanne01'
             withSonarQubeEnv('SonarQube') {
                 sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
