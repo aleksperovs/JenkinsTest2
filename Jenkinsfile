@@ -3,16 +3,8 @@ node {
         git credentialsId: '26aa5f5a-7d5f-4ab7-9af6-f0c628e39bc6', url: 'https://github.com/aleksperovs/JenkinsTest2.git'
     }
     
-    stage('Compile'){
-        sh 'mvn clean compile'
-    }
-    
-    stage('Test'){
-        sh 'mvn test -Dmaven.validate.skip=true -Dmaven.compile.skip=true'
-    }
-    
-    stage('verify'){
-        sh 'mvn verify -Dmaven.validate.skip=true -Dmaven.compile.skip=true -Dmaven.test.skip=true'
+    stage('compile,test, package, verify') {
+        sh 'mvn clean verify'
     }
     
     stage('Archiving') {
@@ -38,7 +30,7 @@ node {
     stage('SonarQube analysis'){
         def scannerHome = tool 'SonarQube_Scanne01'
         withSonarQubeEnv('SonarQube') {
-            sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+            sh "${scannerHome}/bin/sonar-scanner"
         }
     }
 }
