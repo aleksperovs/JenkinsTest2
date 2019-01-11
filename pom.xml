@@ -452,6 +452,13 @@
 			<url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+	
+	   <distributionManagement>
+        <Repository>
+			<id>maven-releases</id>
+			<url>http://localhost:8081/repository/maven-releases/</url>
+        </Repository>
+    </distributionManagement>
 
     <url>demopetclinic</url>
 </project>
