@@ -2,6 +2,8 @@ node {
     stage('checkout') {
         git credentialsId: '26aa5f5a-7d5f-4ab7-9af6-f0c628e39bc6', url: 'https://github.com/aleksperovs/JenkinsTest2.git'
     }
+	
+	currentBuild.displayName = "#${BRANCH_NAME}"
     
     stage('Compile'){
         sh 'mvn clean compile'
