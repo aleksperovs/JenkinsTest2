@@ -40,6 +40,8 @@
         <dandelion.datatables.version>1.1.0</dandelion.datatables.version>
 
         <cobertura.version>2.7</cobertura.version>
+		
+		<project.scm.id>my-scm-server</project.scm.id>
 
     </properties>
 	
