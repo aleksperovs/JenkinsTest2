@@ -424,9 +424,6 @@
     <profiles>
 		<profile>
 			<id>releases</id>
-				<activation>
-					<jdk>1.7</jdk>
-				</activation>
 			<build>
 				<plugins>
 					<plugin>
