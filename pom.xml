@@ -46,6 +46,7 @@
     </properties>
 	
 	<scm>
+		<!-- Set git reposirory -->
 		<connection>scm:git:https://github.com/aleksperovs/JenkinsTest2.git</connection>
 		<url>https://github.com/aleksperovs/JenkinsTest2.git</url>
 		<developerConnection>scm:git:https://github.com/aleksperovs/JenkinsTest2.git</developerConnection>
