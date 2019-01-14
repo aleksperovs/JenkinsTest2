@@ -42,6 +42,7 @@
         <cobertura.version>2.7</cobertura.version>
 		
 		<project.scm.id>my-scm-server</project.scm.id>
+		<additionalparam>-Xdoclint:none</additionalparam>
 
     </properties>
 	
